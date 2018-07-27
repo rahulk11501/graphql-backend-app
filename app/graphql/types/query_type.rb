@@ -5,7 +5,7 @@ Types::QueryType = GraphQL::ObjectType.define do
   field :allLinks, !types[Types::LinkType] do
     # resolve would be called in order to fetch data for that field
     resolve -> (obj, args, ctx) {
-	   Link.all
+	    Link.all
     }
   end
 end

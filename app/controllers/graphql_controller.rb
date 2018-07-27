@@ -8,7 +8,8 @@ class GraphqlController < ApplicationController
       session: session,
       current_user: current_user
     }
-    
+
+    # byebug
     result = GraphqlTutorialSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   end
